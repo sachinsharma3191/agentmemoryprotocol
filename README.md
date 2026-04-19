@@ -132,12 +132,10 @@ AMP is an open specification and contributions are welcome.
 - 🔧 **Build** — create an implementation in your language of choice
 - 📣 **Spread the word** — tell your AI agent framework about AMP
 
+## About
+
+Agent Memory Protocol is an open format maintained by [YouTale AI](https://youtale.ai) and open to contributions from the community.
+
 ## License
 
-This specification is licensed under [Apache 2.0](LICENSE).
-
----
-
-**AMP is a project by [YouTale.AI](https://youtale.ai)**
-
-*Your memories are gold. Own them.*
+Code in this repository is licensed under [Apache 2.0](LICENSE). Documentation is licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
