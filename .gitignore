@@ -1,3 +1,11 @@
+# AMP index (regenerable)
+index/
+!examples/index/
+
+# Embeddings
+*.bin
+embeddings/
+
 # Logs
 logs
 *.log

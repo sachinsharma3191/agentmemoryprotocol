@@ -1,0 +1,15 @@
+amp: "0.1"
+store:
+  id: "store_example"
+  name: "Example Agent Memory"
+  created: "2026-04-18T00:00:00Z"
+
+agent:
+  id: "assistant"
+  name: "My Assistant"
+  description: "A helpful AI assistant"
+
+settings:
+  default_scope: "user"
+  auto_index: true
+  daily_retention: 30
