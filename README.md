@@ -4,6 +4,7 @@
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Spec Version](https://img.shields.io/badge/spec-v0.1--draft-orange.svg)](spec/README.md)
+[![Discussions](https://img.shields.io/badge/discussions-welcome-violet.svg)](https://github.com/agentmemoryprotocol/agentmemoryprotocol/discussions)
 
 ---
 
@@ -123,13 +124,41 @@ See [Interoperability](spec/08-interoperability.md) for details.
 6. **Agent-agnostic** — any agent, any framework, any LLM
 7. **Human-inspectable** — no special tools to understand
 
+## Roadmap
+
+### Now — Spec v0.1 (Draft)
+- [x] Memory store structure
+- [x] Node format and types
+- [x] Links and graph model
+- [x] Daily notes and distillation
+- [x] Index (keywords, graph, embeddings)
+- [x] Standard operations (CLI)
+- [x] Agent integration (MCP, filesystem)
+- [x] Interoperability (import/export adapters)
+- [x] Versioning and conflict resolution
+- [x] Extensions (cost estimation, encryption)
+
+### Next — Reference Implementations
+- [ ] `amp-cli` — TypeScript/Node.js CLI ([help wanted #1](https://github.com/agentmemoryprotocol/agentmemoryprotocol/issues/1))
+- [ ] `amp-mcp` — MCP server for agent integration ([help wanted #2](https://github.com/agentmemoryprotocol/agentmemoryprotocol/issues/2))
+- [ ] `amp-python` — Python library ([help wanted #3](https://github.com/agentmemoryprotocol/agentmemoryprotocol/issues/3))
+
+### Later — Import Adapters
+- [ ] ChatGPT data export → AMP
+- [ ] Gemini / Google Takeout → AMP
+- [ ] Mem0 → AMP
+- [ ] MemPalace → AMP
+- [ ] OpenClaw MEMORY.md → AMP
+
+---
+
 ## Contributing
 
-AMP is an open specification and contributions are welcome.
+AMP is an open specification and contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 - 💬 **Discuss** — [open an issue](https://github.com/agentmemoryprotocol/agentmemoryprotocol/issues) for questions, proposals, or feedback
 - 📝 **Propose changes** — submit a PR against the spec
-- 🔧 **Build** — create an implementation in your language of choice
+- 🔧 **Build** — create an implementation in your language of choice ([see open issues](https://github.com/agentmemoryprotocol/agentmemoryprotocol/issues?q=label%3A%22help+wanted%22))
 - 📣 **Spread the word** — tell your AI agent framework about AMP
 
 ## About
