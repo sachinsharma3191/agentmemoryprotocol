@@ -1,0 +1,53 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "amp-python"
+version = "0.1.0"
+description = "Agent Memory Protocol (AMP) — a file-based memory protocol for AI agents"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [
+    { name = "Agent Memory Protocol Contributors" },
+]
+keywords = ["amp", "agent", "memory", "ai", "llm", "markdown"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+dependencies = [
+    "click>=8.1",
+    "python-frontmatter>=1.1",
+    "pyyaml>=6.0",
+    "rich>=13.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/agentmemoryprotocol/amp"
+Repository = "https://github.com/agentmemoryprotocol/amp"
+Issues = "https://github.com/agentmemoryprotocol/amp/issues"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+]
+
+[project.scripts]
+amp = "amp.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/amp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
