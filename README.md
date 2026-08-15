@@ -94,7 +94,7 @@ See also [[coding-style]] and [[deploy-to-production]].
 
 | Implementation | Language | Status |
 |---------------|----------|--------|
-| `amp-cli` | TypeScript | 🚧 Planned |
+| [`amp-cli`](amp-cli/) | TypeScript | ✅ Available |
 | `amp-mcp` | TypeScript | 🚧 Planned |
 | `amp-python` | Python | 🚧 Planned |
 
@@ -139,7 +139,7 @@ See [Interoperability](spec/08-interoperability.md) for details.
 - [x] Extensions (cost estimation, encryption)
 
 ### Next — Reference Implementations
-- [ ] `amp-cli` — TypeScript/Node.js CLI ([help wanted #1](https://github.com/agentmemoryprotocol/agentmemoryprotocol/issues/1))
+- [x] [`amp-cli`](amp-cli/) — TypeScript/Node.js CLI ([#1](https://github.com/agentmemoryprotocol/agentmemoryprotocol/issues/1))
 - [ ] `amp-mcp` — MCP server for agent integration ([help wanted #2](https://github.com/agentmemoryprotocol/agentmemoryprotocol/issues/2))
 - [ ] `amp-python` — Python library ([help wanted #3](https://github.com/agentmemoryprotocol/agentmemoryprotocol/issues/3))
 

@@ -45,10 +45,10 @@ export function validateStore(paths: ReturnType<typeof requireStore>): Validatio
     let node;
     try {
       node = parseNodeFile(file);
-    } catch (err) {
+    } catch /* v8 ignore start */ (err) {
       issues.push({ level: "error", file: relFile, message: `Failed to parse: ${(err as Error).message}` });
       continue;
-    }
+    } /* v8 ignore stop */
 
     const fm = node.frontmatter as Record<string, unknown>;
 

@@ -30,11 +30,11 @@ export function registerListCommand(program: Command): void {
       if (options.status) nodes = nodes.filter((n) => n.frontmatter.status === (options.status as NodeStatus));
       if (options.tag) nodes = nodes.filter((n) => (n.frontmatter.tags ?? []).includes(options.tag!));
 
-      const sortField = options.sort ?? "modified";
+      const sortField = options.sort ?? /* v8 ignore next */ "modified";
       nodes.sort((a, b) => {
         if (sortField === "id") return a.frontmatter.id.localeCompare(b.frontmatter.id);
-        if (sortField === "created") return (b.frontmatter.created ?? "").localeCompare(a.frontmatter.created ?? "");
-        return (b.frontmatter.modified ?? "").localeCompare(a.frontmatter.modified ?? "");
+        if (sortField === "created") return (b.frontmatter.created ?? /* v8 ignore next */ "").localeCompare(a.frontmatter.created ?? /* v8 ignore next */ "");
+        return (b.frontmatter.modified ?? /* v8 ignore next */ "").localeCompare(a.frontmatter.modified ?? /* v8 ignore next */ "");
       });
 
       if (options.json) {

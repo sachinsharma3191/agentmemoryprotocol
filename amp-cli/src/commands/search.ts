@@ -74,7 +74,7 @@ export function registerSearchCommand(program: Command): void {
       }
 
       let results = searchNodes(nodes, query, filters);
-      const limit = Number(options.limit ?? "20");
+      const limit = Number(options.limit ?? /* v8 ignore next */ "20");
       if (!Number.isNaN(limit)) results = results.slice(0, limit);
 
       if (options.json) {

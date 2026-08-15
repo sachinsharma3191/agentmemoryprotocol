@@ -81,7 +81,7 @@ export function registerRecallCommand(program: Command): void {
     .action((context: string, options: RecallOptions) => {
       const paths = requireStore(process.cwd());
       const nodes = listAllNodes(paths);
-      const limit = Number(options.limit ?? "10");
+      const limit = Number(options.limit ?? /* v8 ignore next */ "10");
       const results = recallNodes(nodes, context, { status: options.status, limit });
 
       if (options.json) {

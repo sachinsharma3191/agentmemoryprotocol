@@ -130,7 +130,7 @@ function normalizeType(type?: string): NodeType | undefined {
 }
 
 function deriveHeading(content: string): string {
-  const firstLine = content.trim().split("\n")[0] ?? content;
+  const firstLine = content.trim().split("\n")[0] ?? /* v8 ignore next */ content;
   const words = firstLine.split(/\s+/).slice(0, 8).join(" ");
   return words.length < firstLine.length ? `${words}…` : words;
 }

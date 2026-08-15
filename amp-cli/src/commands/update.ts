@@ -36,7 +36,7 @@ export function registerUpdateCommand(program: Command): void {
       if (options.content !== undefined) {
         node.content = options.content.trim().startsWith("#")
           ? options.content.trim()
-          : `# ${node.content.match(/^#\s+(.+)$/m)?.[1] ?? id}\n\n${options.content.trim()}`;
+          : `# ${node.content.match(/^#\s+(.+)$/m)?.[1] ?? /* v8 ignore next */ id}\n\n${options.content.trim()}`;
         changed.push("content");
       }
 

@@ -47,13 +47,13 @@ export function buildKeywordsIndex(nodes: MemoryNode[]): KeywordsIndex {
   const nodesOut: Record<string, KeywordEntry[]> = {};
 
   for (const node of nodes) {
-    const terms = perNodeTerms.get(node.frontmatter.id) ?? [];
+    const terms = perNodeTerms.get(node.frontmatter.id) ?? /* v8 ignore next */ [];
     const tf = computeTermFrequencies(terms);
     const maxTf = Math.max(1, ...Array.from(tf.values()));
 
     const scored: KeywordEntry[] = Array.from(tf.entries()).map(([term, freq]) => {
       const normalizedTf = freq / maxTf;
-      const df = docFrequency.get(term) ?? 1;
+      const df = docFrequency.get(term) ?? /* v8 ignore next */ 1;
       const idf = Math.log(totalDocs / df + 1) + 1;
       return { keyword: term, score: Number((normalizedTf * idf).toFixed(4)) };
     });

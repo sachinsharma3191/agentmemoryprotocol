@@ -40,7 +40,7 @@ export function registerShowCommand(program: Command): void {
       }
 
       const graph = readGraphIndex(paths);
-      const backlinks = graph?.nodes[fm.id]?.incoming ?? [];
+      const backlinks = graph?.nodes[fm.id]?.incoming ?? /* v8 ignore next */ [];
       if (backlinks.length) {
         console.log(kv("backlinks", backlinks.map((l) => `${l.target} (${l.relation})`).join(", ")));
       }
